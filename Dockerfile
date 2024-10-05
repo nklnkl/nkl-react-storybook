@@ -6,12 +6,16 @@ WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
+COPY tsconfig.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
 COPY . .
+
+# Run type-check
+RUN npm run type-check
 
 # Build Storybook
 RUN npm run build-storybook

@@ -1,10 +1,9 @@
 import React from 'react';
-
-import { Header } from './Header';
+import { Header } from '../Header/Header';
 import './page.css';
 
-export const Page = () => {
-  const [user, setUser] = React.useState();
+export const Page: React.FC = () => {
+  const [user, setUser] = React.useState<{ name: string } | undefined>();
 
   return (
     <article>
