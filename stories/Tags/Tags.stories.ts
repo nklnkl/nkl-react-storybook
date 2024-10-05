@@ -22,3 +22,11 @@ export const WithInputProps: Story = {
     },
   },
 };
+
+export const WithOnTagsChange: Story = {
+  args: {
+    onTagsChange: (tags: string[]) => {
+      console.log(tags);
+    },
+  },
+};
