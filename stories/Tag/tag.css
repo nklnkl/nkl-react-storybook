@@ -1,0 +1,10 @@
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
