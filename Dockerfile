@@ -1,5 +1,5 @@
 # Use an official Node runtime as the base image
-FROM node:18-alpine
+FROM node:18-bullseye
 
 # Set the working directory in the container
 WORKDIR /app
@@ -21,3 +21,6 @@ EXPOSE 6006
 
 # Define the command to run Storybook
 CMD ["npm", "run", "storybook"]
+
+# Install xdg-utils
+RUN apt-get update && apt-get install -y xdg-utils
