@@ -15,3 +15,21 @@ export const Default: Story = {
     label: 'Tag',
   },
 };
+
+export const WithOnClick: Story = {
+  args: {
+    label: 'Tag',
+    onClick: () => {
+      console.log('click');
+    },
+  },
+};
+
+export const WithOnClose: Story = {
+  args: {
+    label: 'Tag',
+    onClose: () => {
+      console.log('close');
+    },
+  },
+};

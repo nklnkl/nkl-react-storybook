@@ -37,7 +37,7 @@ export const Tags: React.FC<TagsProps> = ({ inputProps, tagProps, onTagsChange }
         <div className="container">
             <div className="tags">
                 {tags.map((tag) =>
-                <Tag key={tag} label={tag} onClick={() => removeTag(tag)} {...tagProps} />
+                <Tag key={tag} label={tag} onClose={() => removeTag(tag)} {...tagProps} />
             )}
             <input
                 type="text"
