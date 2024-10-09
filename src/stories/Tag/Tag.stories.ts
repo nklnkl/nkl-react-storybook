@@ -33,3 +33,12 @@ export const WithOnClose: Story = {
     },
   },
 };
+
+export const WithClasses: Story = {
+  args: {
+    label: 'Tag',
+    containerClassesOverride: 'bg-black',
+    labelClassesOverride: 'text-red-500',
+    closeClassesOverride: 'text-white',
+  },
+};

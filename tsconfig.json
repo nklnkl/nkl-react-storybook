@@ -17,7 +17,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "stories/**/*",
+    "src/stories/**/*",
     ".storybook/**/*"
   ]
 }

@@ -1,15 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import './tags.css';
 import { Tag, TagProps } from '../Tag/Tag';
 
 interface TagsProps {
     inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
     tagProps?: TagProps;
     onTagsChange?: (tags: string[]) => void;
-
 }
 
 export const Tags: React.FC<TagsProps> = ({ inputProps, tagProps, onTagsChange }) => {
+
+    const containerClasses = `
+    `;
+
+    const tagsClasses = `
+    p-2
+    flex flex-wrap gap-1
+    border border-grey-300 rounded
+    `;
+
+    const inputClasses = `
+    border-none
+    outline-none
+    `;
+
+    const infoClasses = `
+    text-grey-200
+    text-xs
+    `;
 
     const [tags, setTags] = useState<string[]>([]);
 
@@ -34,20 +51,20 @@ export const Tags: React.FC<TagsProps> = ({ inputProps, tagProps, onTagsChange }
     };
 
     return (
-        <div className="container">
-            <div className="tags">
+        <div className={containerClasses}>
+            <div className={tagsClasses}>
                 {tags.map((tag) =>
-                <Tag key={tag} label={tag} onClose={() => removeTag(tag)} {...tagProps} />
-            )}
-            <input
-                type="text"
-                className="input"
-                placeholder="Enter tags"
-                onKeyDown={onSubmit}
-                {...inputProps}
+                    <Tag key={tag} label={tag} onClose={() => removeTag(tag)} {...tagProps} />
+                )}
+                <input
+                    type="text"
+                    className={inputClasses}
+                    placeholder="Enter tags"
+                    onKeyDown={onSubmit}
+                    {...inputProps}
                 />
             </div>
-            <span className="info">
+            <span className={infoClasses}>
                 Each tag followed by enter key
             </span>
         </div>

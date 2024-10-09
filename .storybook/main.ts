@@ -1,7 +1,7 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
-  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/stories/**/*.mdx", "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-onboarding",
@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     "@storybook/preset-typescript",
+    "@storybook/addon-styling-webpack"
   ],
   framework: {
     name: "@storybook/react-webpack5",
